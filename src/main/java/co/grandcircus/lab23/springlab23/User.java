@@ -2,6 +2,9 @@ package co.grandcircus.lab23.springlab23;
 
 import java.io.Serializable;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -24,12 +27,27 @@ public class User implements Serializable {
 	}
 
 
-	public User(String firstName, String lastName, String email, String phone, String password) {
+	public User(Long id, String firstName, String lastName, String email, String phone, String password) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 
